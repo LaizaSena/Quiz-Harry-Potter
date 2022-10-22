@@ -8,19 +8,19 @@ function Index() {
         <div className='container-login'>
             <form>
                 <img src={HP} width='100px' />
-                <h2>
+                <h2 className='text-login'>
                     Olá, bruxinha(o), está pronta(o) para nosso quiz?
                     Insira seu nome, selecione sua casa e vamos começar!
                 </h2>
                 <input type='text' placeholder='Nome'/>
-                <select name='select'>
-                    <option value='casa'>Casa</option>
+                <select name='select' placeholder='Casa'>
+                    <option value='casa' selected>Casa</option>
                     <option value='corvinal'>Corvinal</option>
                     <option value='grifinoria'>Grifinória</option>
                     <option value='lufa-lufa'>Lufa-Lufa</option>
                     <option value='sonserina'>Sonserina</option>
                 </select>
-                <button>Começar</button>
+                <button className='btn-login'>Começar</button>
             </form>
         </div>
     )

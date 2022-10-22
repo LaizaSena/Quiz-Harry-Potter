@@ -6,3 +6,9 @@
     color: #FFF;
     font-family: papyrus;
 }
+
+@media (max-width: 400px) {
+    .container-nav {
+        font-size: 12px;
+    }
+}

@@ -1,23 +1,31 @@
-.container-login{
+.container-login {
     margin: auto;
+    margin-top: 1em;
     width: 45%;
+    border-radius: .4em;
     background-color: #393431;
     color: #FFF;
 }
 
-.container-login form{
+.container-login form {
     padding: 20px;
-    height: 400px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 25px;
     font-family: papyrus;
     font-size: 16px;
 }
 
-.container-login form input, select{
-    background-color: transparent;
-    border:none;
+.text-login {
+    text-align: justify;
+}
+
+.container-login form input,
+select {
+    width: 90%;
+    background-color: #393431;
+    border: none;
     border-bottom: 1px solid #FFF;
     color: #FFF;
     font-size: 18px;
@@ -25,17 +33,29 @@
     outline: none;
 }
 
-.container-login form button{
-    width: 150px;
+.container-login form .btn-login {
+    width: 40%;
     height: 35px;
     background-color: transparent;
     color: #FFF;
     border: 2px solid #FFF;
+    border-radius: .4em;
     font-size: 18px;
     font-family: papyrus;
 }
 
-.container-login form button:hover{
+.container-login form .btn-login:hover {
     background-color: #FFF;
     color: #000;
+}
+
+@media (max-width: 400px) {
+    .container-login {
+        width: 95%;
+    }
+
+    .container-login form input,
+    select {
+        font-size: 20px;
+    }
 }
