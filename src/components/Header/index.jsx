@@ -4,11 +4,9 @@ import './style.css';
 
 function Index() {
   return (
-    <div>
-      <nav>
-        <h1>QUIZ - HARRY POTTER</h1>
+      <nav className='container-nav'>
+        <h1 className='title-nav'>QUIZ - HARRY POTTER</h1>
       </nav>
-    </div>
   )
 }
 
