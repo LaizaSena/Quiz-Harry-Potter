@@ -1,0 +1,42 @@
+.form-questions {
+    padding: 90px;
+    display: flex;
+    justify-content: center;
+}
+
+.perguntas,
+.alternativas {
+    padding: 40px;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(57, 51, 51);
+    color: #FFF;
+    text-align: center;
+    font-size: 22px;
+    font-family: papyrus;
+}
+
+p {
+    padding: 15px 0;
+}
+
+.alternativas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.alternativas button {
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid #FFF;
+    color: #FFF;
+    font-size: 20px;
+    font-family: papyrus;
+}
+
+.alternativas button:hover {
+    background-color: #FFF;
+    color: #000;
+}
