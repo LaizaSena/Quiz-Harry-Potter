@@ -4,8 +4,8 @@
     justify-content: center;
 }
 
-.perguntas,
-.alternativas {
+.question,
+.answer {
     padding: 40px;
     width: 300px;
     height: 300px;
@@ -20,14 +20,14 @@ p {
     padding: 15px 0;
 }
 
-.alternativas {
+.question {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
 }
 
-.alternativas button {
+.answer button {
     height: 50px;
     background-color: transparent;
     border: 2px solid #FFF;
@@ -36,7 +36,7 @@ p {
     font-family: papyrus;
 }
 
-.alternativas button:hover {
+.answer button:hover {
     background-color: #FFF;
     color: #000;
 }
