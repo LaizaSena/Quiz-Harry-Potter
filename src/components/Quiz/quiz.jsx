@@ -43,34 +43,49 @@ const questions = [
 function quiz() {
     const [score, setScore] = useState(0);
     const [showScore, setShowScore] = useState(false);
+    const [questionAtual, setQuestionAtual] = useState(0);
+
+    function handleAnswer(isCorrect) {
+        if (isCorrect) {
+            setScore(score + 1); // se estiver correto, adiciona 1 à pontuação
+        }
+
+        const proximaQuestion = questionAtual + 1;
+        if (proximaQuestion < questions.length) {
+            setQuestionAtual(proximaQuestion);
+        } else {
+            setShowScore(true);
+        }
+    }
 
     return (
         <div className='container'>
-            <form className='form-questions'>
-                {showScore ? ( // ternário que vai indicar a quantidade de questões que pontuou
-                    <section className='score'>
-                        Você pontuou {score} de {questions.length}
+            {showScore ? ( // ternário que vai indicar a quantidade de questões que pontuou
+                <section className='score'>
+                    Você pontuou {score} de {questions.length}
+                </section>
+            ) : (
+                <>
+                    <section className='count-questions'>
+                        <span>------------------ Questão {questionAtual + 1}</span> de {questions.length} ------------------ {/* Calcula em qual questão a pessoa está */}
                     </section>
-                ) : (
-                    <>
+                    <div className='form-questions'>
                         <section className='question'>
                             ⚡⚡⚡
-                            <p>{questions[0].question}</p> {/* Para acessar a questão desejada dentro do array */}
+                            <p><b>{questions[questionAtual].question}</b></p> {/* Para acessar a questão desejada dentro do array */}
                             ⚡⚡⚡
                         </section>
 
                         <section className='answer'>
-                            {questions[0].options.map[(options, index) => (
-                                <button onClick={() => handleAnswer(options.isCorrect)} key={index}>
+                            {questions[questionAtual].options.map((options, index) => (
+                                <button className='btn-answer' onClick={() => handleAnswer(options.isCorrect)} key={index}>
                                     {options.answer}
                                 </button>
-                            )]}
+                            ))}
                         </section>
-                    </>
-                )}
-            </form>
-
-
+                    </div>
+                </>
+            )}
         </div>
     )
 }
