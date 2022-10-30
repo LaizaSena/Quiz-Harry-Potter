@@ -5,12 +5,12 @@
     display: flex;
     flex-direction: column;
     background-color: #393431;
+    color: #FFF;
 }
 
 .score {
     margin: 1.5em auto;
     text-align: center;
-    color: #FFF;
     font-size: 20px;
     font-family: papyrus;
 }
@@ -18,7 +18,6 @@
 .count-questions {
     margin-bottom: 1.5em;
     text-align: center;
-    color: #FFF;
     font-size: 20px;
     font-family: papyrus;
 }
