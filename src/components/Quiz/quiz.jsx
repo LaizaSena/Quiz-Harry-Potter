@@ -32,10 +32,46 @@ const questions = [
     {
         question: 'O que Sirius Black é de Harry Potter?',
         options: [
-            { answer: 'Padrasto', isCorrect: true },
+            { answer: 'Padrasto', isCorrect: false },
             { answer: 'Irmão', isCorrect: false },
             { answer: 'Primo', isCorrect: false },
             { answer: 'Padrinho', isCorrect: true },
+        ],
+    },
+    {
+        question: 'Qual o nome do rato de Rony Weasley?',
+        options: [
+            { answer: 'Bichento', isCorrect: false },
+            { answer: 'Perebas', isCorrect: true },
+            { answer: 'Rato', isCorrect: false },
+            { answer: 'Lockhart', isCorrect: false },
+        ],
+    },
+    {
+        question: 'Quem matou Cedrico Diggory?',
+        options: [
+            { answer: 'Harry Potter', isCorrect: false },
+            { answer: 'Pedro Pettigrew', isCorrect: true },
+            { answer: 'Hagrid', isCorrect: false },
+            { answer: 'Voldemort', isCorrect: false },
+        ],
+    },
+    {
+        question: 'Quem tenta impedir Harry Potter de ir para escola?',
+        options: [
+            { answer: 'Bichento', isCorrect: false },
+            { answer: 'Rony Weasley', isCorrect: false },
+            { answer: 'Winky', isCorrect: false },
+            { answer: 'Dobby', isCorrect: true },
+        ],
+    },
+    {
+        question: 'Qual o monstro preso na câmara secreta?',
+        options: [
+            { answer: 'Basilisco', isCorrect: true },
+            { answer: 'Serpente', isCorrect: false },
+            { answer: 'Hippogrifo', isCorrect: false },
+            { answer: 'Aranha Gigante', isCorrect: false },
         ],
     },
 ]
@@ -67,7 +103,7 @@ function quiz() {
             ) : (
                 <>
                     <section className='count-questions'>
-                        <span>------------------ Questão {questionAtual + 1}</span> de {questions.length} ------------------ {/* Calcula em qual questão a pessoa está */}
+                        <span>---- Questão {questionAtual + 1}</span> de {questions.length} ---- {/* Calcula em qual questão a pessoa está */}
                     </section>
                     <div className='form-questions'>
                         <section className='question'>

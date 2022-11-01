@@ -34,7 +34,7 @@ p {
     font-family: papyrus;
 }
 
-.question{
+.question {
     margin: 1em auto auto;
     width: 40%;
 }
@@ -56,8 +56,46 @@ p {
     font-family: papyrus;
     cursor: pointer;
 }
-.btn-answer:hover{
+
+.btn-answer:hover {
     background-color: #FFF;
     color: #393431;
     transition: .5s;
+}
+
+@media screen and (max-width: 420px) {
+    .count-questions {
+        margin-bottom: 0;
+    }
+
+    .form-questions {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .question {
+        margin: .5em 0;
+        width: 100%;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .answer {
+        width: 100%;
+    }
+
+    .btn-answer {
+        max-width: 25%;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+     .btn-answer {
+        min-width: 70%;
+        max-width: 30%;
+        font-size: 18px;
+    }
 }
