@@ -1,11 +1,14 @@
 .container-footer {
-    margin-top: 2em;
+    /* margin-top: 5em; */
     display: flex;
+    width: 100%;
     flex-direction: column;
     background-color: #393431;
     color: #FFF;
     text-align: center;
     font-family: papyrus;
+    position: fixed;
+    bottom: 0;
 }
 
 @media (max-width: 400px) {

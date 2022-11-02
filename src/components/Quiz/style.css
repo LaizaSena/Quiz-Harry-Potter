@@ -1,7 +1,7 @@
 .container {
-    margin: 2em auto;
-    padding: 2em;
-    width: 60%;
+    margin: 1em auto;
+    padding: 2em 1em;
+    width: 80%;
     display: flex;
     flex-direction: column;
     background-color: #393431;
@@ -9,7 +9,7 @@
 }
 
 .score {
-    margin: 1.5em auto;
+    padding: 2em;
     text-align: center;
     font-size: 20px;
     font-family: papyrus;
@@ -64,6 +64,10 @@ p {
 }
 
 @media screen and (max-width: 420px) {
+    .container {
+        margin: 1em auto;
+    }
+
     .count-questions {
         margin-bottom: 0;
     }
@@ -79,6 +83,7 @@ p {
     }
 
     p {
+        margin: 0;
         font-size: 20px;
     }
 
@@ -87,15 +92,28 @@ p {
     }
 
     .btn-answer {
-        max-width: 25%;
         font-size: 15px;
+    }
+
+    .btn-answer:focus {
+        background-color: transparent;
+        border: 2px solid #FFF;
+        color: #FFF;
+        outline: none;
     }
 }
 
 @media screen and (max-width: 768px) {
-     .btn-answer {
-        min-width: 70%;
-        max-width: 30%;
-        font-size: 18px;
+    .container {
+    padding: 3em 1em;
+    }
+    .answer {
+        margin-top: 1em;
+    }
+    .btn-answer {
+        margin: 0;
+        max-height: 5em;
+        width: 50%;
+        font-size: 17px;
     }
 }
